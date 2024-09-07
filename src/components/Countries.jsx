@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 export function Countries({ list }) {
   // PAGINATION
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 8;
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
