@@ -4,12 +4,12 @@
   --Very-Dark-Blue-light-mode: hsl(200, 15%, 8%);
   --Dark-Gray-light-mode: hsl(0, 0%, 52%);
   --Very-Light-Gray-light-bg: hsl(0, 0%, 98%);
-  
+
   --White: hsl(0, 0%, 100%);
   --body-bg: hsl(0, 0%, 98%);
   --body-text: hsl(200, 15%, 8%);
   --input-text: hsl(0, 0%, 52%);
-  --card-bg: hsl(0, 0%, 100%);;
+  --card-bg: hsl(0, 0%, 100%);
   --box-shadow: hsl(0, 0%, 52%);
 }
 
@@ -99,7 +99,7 @@ main {
   gap: 10px;
   font-size: 1.1em;
   margin-bottom: 2em;
-  box-shadow: 0em 0em .15em var(--box-shadow);
+  box-shadow: 0em 0em 0.15em var(--box-shadow);
 }
 
 .search input {
@@ -119,7 +119,6 @@ main {
   margin-bottom: 3em;
   position: relative;
   box-shadow: 0em 0em 0.15em var(--box-shadow);
-
 }
 
 .filter .dropdown-header {
@@ -161,7 +160,7 @@ main {
 
 .countries > div:nth-child(1) {
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
   margin-bottom: 3em;
 }
 
@@ -169,12 +168,15 @@ main {
   background-color: var(--card-bg);
   border-radius: 10px;
   box-shadow: 0em 0em 0.15em var(--box-shadow);
+}
 
+.country_card img{
+  height: 180px !important;
 }
 
 .country_details {
   padding: 2rem 1rem 3rem;
-  font-size: 1.2em;
+  font-size: 1.1em;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -283,14 +285,13 @@ main {
 
 /* TABLET  */
 @media screen and (min-width: 768px) {
-
-  .search_filter_wrapper{
+  .search_filter_wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  .filter{
+  .filter {
     margin-bottom: 2em;
   }
 
@@ -305,8 +306,6 @@ main {
   .country > .grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  
 }
 
 @media screen and (min-width: 1000px) {
