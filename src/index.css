@@ -9,11 +9,15 @@
   --body-bg: hsl(0, 0%, 98%);
   --body-text: hsl(200, 15%, 8%);
   --input-text: hsl(0, 0%, 52%);
+  --card-bg: hsl(0, 0%, 100%);;
+  --box-shadow: hsl(200, 15%, 8%);
 }
 
 [data-theme="dark"] {
   --body-bg: hsl(207, 26%, 17%);
-  --body-text: hsl(209, 23%, 22%);
+  --body-text: hsl(0, 0%, 100%);
+  --card-bg: hsl(209, 23%, 22%);
+  --box-shadow: hsl(207, 26%, 17%);
 }
 
 * {
@@ -25,6 +29,8 @@
 img {
   width: 100%;
   max-width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 a {
@@ -37,6 +43,7 @@ a {
   background: var(--body-bg);
   font-size: 16px;
   font-family: "Nunito Sans", sans-serif;
+  height: 100%;
   min-height: 100vh;
 }
 
@@ -54,8 +61,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 1rem;
-  background-color: var(--body-bg);
-  box-shadow: 0em 0.1em 0.5em var(--Dark-Gray-light-mode);
+  background-color: var(--card-bg);
+  box-shadow: 0em 0.1em 0.5em var(--box-shadow);
 }
 
 nav p {
@@ -66,6 +73,7 @@ nav p {
 nav button {
   font-size: 16px;
   border: none;
+  color: var(--body-text);
   background-color: transparent;
   font-weight: 500;
   cursor: pointer;
@@ -80,7 +88,7 @@ main {
 /* SEARCH */
 
 .wrapper {
-  background: var(--White);
+  background: var(--card-bg);
   padding: 1em 1.5em;
   border-radius: 10px;
 }
@@ -91,7 +99,7 @@ main {
   gap: 10px;
   font-size: 1.1em;
   margin-bottom: 2em;
-  box-shadow: 0.3em 0.3em 1em var(--Very-Light-Gray-light-bg);
+  box-shadow: 0em 0em .5em var(--box-shadow);
 }
 
 .search input {
@@ -133,12 +141,12 @@ main {
   top: 115%;
   left: 0;
   width: 100%;
-  padding-inline: 12px;
-  background-color: var(--White);
+  padding: 20px 12px;
+  background-color: var(--card-bg);
 }
 
 .filter .option {
-  background-color: var(--White);
+  background-color: var(--card-bg);
   padding-block: 8px;
   cursor: pointer;
 }
@@ -156,7 +164,7 @@ main {
 }
 
 .country_card {
-  background-color: var(--White);
+  background-color: var(--card-bg);
   border-radius: 10px;
 }
 
@@ -185,15 +193,16 @@ main {
   justify-content: center;
   width: 100%;
   align-items: center;
-  margin: 32px 24px;
+  padding: 32px 24px;
   overflow: hidden;
 }
 
 .pagination button {
-  border: 1px solid var(--Dark-Blue);
+  border: 1px solid var(--box-shadow);
   padding: 0.75rem 1rem;
   border-radius: 12px;
   width: fit-content;
+  cursor: pointer;
 }
 
 .pagination button:disabled {
@@ -222,8 +231,8 @@ main {
   border-radius: 5px;
   outline: none;
   width: fit-content;
-  background-color: var(--White);
-  box-shadow: 0em 0em 0.2em var(--Very-Dark-Blue-dark-mode);
+  background-color: var(--card-bg);
+  box-shadow: 0em 0em 0.2em var(--box-shadow);
 }
 
 .country_info {
@@ -238,8 +247,8 @@ main {
 }
 
 .country_info.borders p span {
-  background-color: var(--White);
-  box-shadow: 0em 0em 0.2em var(--Very-Dark-Blue-dark-mode);
+  background-color: var(--card-bg);
+  box-shadow: 0em 0em 0.2em var(--box-shadow);
   padding: 10px;
   width: 80px;
   text-align: center;
@@ -293,14 +302,16 @@ main {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .country > .grid > div > section {
-    flex-direction: row;
-  }
+  
 }
 
 @media screen and (min-width: 1000px) {
   .countries > div:nth-child(1) {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .country > .grid > div > section {
+    flex-direction: row;
   }
 }
 

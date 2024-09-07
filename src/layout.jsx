@@ -23,7 +23,7 @@ export default function Layout() {
 
   return (
     <div className="app" data-theme={`${theme === "dark" ? "dark" : ""}`}>
-      <Navbar setTheme={setTheme} />
+      <Navbar theme={theme} setTheme={setTheme} />
       <RouterProvider router={router} />
     </div>
   );
