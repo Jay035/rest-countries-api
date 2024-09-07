@@ -80,7 +80,7 @@ export function Pagination({
       ))}
       <button
         disabled={currentPage === totalPages}
-        className="border bg-[#14532D] text-white border-[#14532D]  px-4 py-3 rounded-lg disabled:opacity-80 disabled:hover:opacity-100 hover:bg-[#14532D] hover:text-white"
+        className=""
         onClick={() => handlePageClick(currentPage + 1)}
       >
         <i className="ri-arrow-right-line"></i>

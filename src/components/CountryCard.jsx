@@ -7,7 +7,7 @@ export function CountryCard({ data }) {
       <img src={data?.flags?.svg} alt="country flag" className="country_flag" />
       <div className="country_details">
         <Link to={`country/${data?.name}`}>
-          <h2 className="country_name">{data?.name}</h2>
+          <h1 className="country_name">{data?.name}</h1>
         </Link>
         <p className="country_info">
           <span>Population:</span> {data?.population}
