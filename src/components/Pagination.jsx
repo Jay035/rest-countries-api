@@ -53,7 +53,7 @@ export function Pagination({
         onClick={() => handlePageClick(currentPage - 1)}
       >
         <i className="ri-arrow-left-line"></i>
-        {/* Previous */}
+        Previous
       </button>
       {/* <div className="">
         {Array.from({ length: totalPages }, (_, index) => (
@@ -84,7 +84,7 @@ export function Pagination({
         onClick={() => handlePageClick(currentPage + 1)}
       >
         <i className="ri-arrow-right-line"></i>
-        {/* Next */}
+        Next
       </button>
     </div>
   );
