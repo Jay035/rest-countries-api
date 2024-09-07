@@ -10,7 +10,7 @@
   --body-text: hsl(200, 15%, 8%);
   --input-text: hsl(0, 0%, 52%);
   --card-bg: hsl(0, 0%, 100%);;
-  --box-shadow: hsl(200, 15%, 8%);
+  --box-shadow: hsl(0, 0%, 52%);
 }
 
 [data-theme="dark"] {
@@ -62,7 +62,7 @@ nav {
   justify-content: space-between;
   padding: 1.5rem 1rem;
   background-color: var(--card-bg);
-  box-shadow: 0em 0.1em 0.5em var(--box-shadow);
+  box-shadow: 0em 0em 0.4em var(--box-shadow);
 }
 
 nav p {
@@ -99,7 +99,7 @@ main {
   gap: 10px;
   font-size: 1.1em;
   margin-bottom: 2em;
-  box-shadow: 0em 0em .5em var(--box-shadow);
+  box-shadow: 0em 0em .15em var(--box-shadow);
 }
 
 .search input {
@@ -118,6 +118,8 @@ main {
   width: fit-content;
   margin-bottom: 3em;
   position: relative;
+  box-shadow: 0em 0em 0.15em var(--box-shadow);
+
 }
 
 .filter .dropdown-header {
@@ -166,6 +168,8 @@ main {
 .country_card {
   background-color: var(--card-bg);
   border-radius: 10px;
+  box-shadow: 0em 0em 0.15em var(--box-shadow);
+
 }
 
 .country_details {
